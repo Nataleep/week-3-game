@@ -1,0 +1,42 @@
+html {
+  
+font-family: 'Vesper Libre', serif;
+	
+
+}
+body {
+
+background-image: url(http://image.shutterstock.com/z/stock-photo-banned-rubber-stamp-over-a-white-background-133290611.jpg)
+
+
+
+}
+
+
+
+h1{
+
+
+}
+
+
+}
+
+p {
+
+
+}
+
+/*
+ * Footer Styles
+ */
+
+.footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:50px;
+   width:100%;
+   background:#999;
+}
+  

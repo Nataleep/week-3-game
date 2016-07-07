@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en" >
+
+<meta charset="utf-8">
+
+<head>
+		<title>Banned Books Hangman</title>
+
+	<link rel="stylesheet" type="text/css" href="hangman.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Vesper+Libre" rel="stylesheet">
+
+</head>
+
+
+<h1>BANNED BOOKS HANGMAN</h1>
+
+<body>
+
+	
+	<script>
+ 
+		
+var name = prompt("What's your name?");
+console.log("Hello " + name);
+
+window.alert('Lets play Banned Books Hangman.  The word to guess is represented by a row of dashes, representing each letter of the word.  Next, try to guess the letters in the word. Each time you guess a letter correctly, it fills in the blanks for each occurrence of that letter.  Good Luck!')
+
+		
+var words = [ 
+"ulysses",
+"beloved",
+"lolita",
+"the jungle",
+"native son",
+"invisible man",
+"the awakening",
+"naked lunch",
+"brideshead revisited",
+"harry potter"];
+
+
+var word = words[Math.floor(Math.random() * words.length)];
+
+var answerArray = [];
+for (var i = 0; i < word.length; i++) {
+answerArray[i] = "_"; }
+								
+var remainingLetters = word.length;
+	
+while (remainingLetters > 0) {
+
+	alert(answerArray.join(" "));
+
+	var guess = prompt("Guess a letter, or click Cancel to stop playing.");
+
+		if (guess === null) {
+						break;
+						}
+		else if (guess.length !== 1) {
+		alert("Please enter a single letter.");
+									}
+		else {
+		for (var i = 0; i < word.length; i++) {
+			if (word[i] === guess) {
+				answerArray[i] = guess;
+					remainingLetters--;
+						}
+						}
+						}
+						}
+
+					alert(answerArray.join(" "));
+					alert("Good job! The answer was " + word);
+
+							
+								
+			</script>
+	
+	<footer>
+	
+	<p> &copy; Copyright 2016 K Natalee Puranda</p>
+	
+	</footer>
+
+
+</body>
+</html>
